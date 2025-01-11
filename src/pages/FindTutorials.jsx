@@ -53,7 +53,7 @@ const FindTutorials = () => {
                                     <p>{items?.description.slice(0, 100)}....</p>
                                     <div className="flex flex-wrap justify-between items-center pt-3 space-x-2  dark:text-gray-600">
                                         <p className='font-bold'>Review {items.review}</p>
-                                        <Link to={`/tutor/${items._id}`}><button className="btn btn-sm bg-purple-300">See More</button></Link>
+                                        <Link to={`/tutor/${items._id}`}><button className="btn text-black hover:text-gray-50 btn-sm bg-purple-300">See More</button></Link>
                                     </div>
                                 </div>
                             </article>)

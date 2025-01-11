@@ -17,9 +17,9 @@ const Support = () => {
     return (
         <section className="bg-purple-50 md:pt-28 pt-28 pb-16" id="support">
             <div className="container mx-auto px-4">
-                <h2 className="text-4xl font-bold text-center  mb-8">Support & Contact</h2>
+                <h2 className="text-4xl font-bold text-black text-center  mb-8">Support & Contact</h2>
 
-                <p className="text-center text-lg mb-10">
+                <p className="text-center text-lg text-black mb-10">
                     Need help or have a question? We are here to assist you! Feel free to reach out through any of the following methods.
                 </p>
 
@@ -28,8 +28,8 @@ const Support = () => {
                     {/* Email Support */}
                     <Fade direction='left' triggerOnce>
                         <div className="flex flex-col items-center text-center max-w-xs mx-auto">
-                            <h3 className="text-xl font-semibold  mb-4">Email Support</h3>
-                            <p className=" mb-4">
+                            <h3 className="text-xl font-semibold text-black mb-4">Email Support</h3>
+                            <p className="text-black mb-4">
                                 For any queries, feel free to send us an email. We aim to respond within 24 hours.
                             </p>
                             <a
@@ -44,8 +44,8 @@ const Support = () => {
                     {/* Phone Support */}
                     <Fade direction='top' triggerOnce>
                         <div className="flex flex-col items-center text-center max-w-xs mx-auto">
-                            <h3 className="text-xl font-semibold  mb-4">Phone Support</h3>
-                            <p className=" mb-4">
+                            <h3 className="text-xl font-semibold text-black mb-4">Phone Support</h3>
+                            <p className="text-black mb-4">
                                 For urgent inquiries, you can reach us by phone. Our support team is available Monday to Friday, 9 AM to 5 PM.
                             </p>
                             <a
@@ -60,8 +60,8 @@ const Support = () => {
                     {/* Social Media Support */}
                     <Fade direction='right' triggerOnce>
                         <div className="flex flex-col items-center text-center max-w-xs mx-auto">
-                            <h3 className="text-xl font-semibold  mb-4">Social Media</h3>
-                            <p className=" mb-4">
+                            <h3 className="text-xl text-black font-semibold  mb-4">Social Media</h3>
+                            <p className="text-black mb-4">
                                 You can also reach us via our social media platforms for support and updates.
                             </p>
                             <div className="flex gap-6">
