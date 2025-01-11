@@ -6,10 +6,10 @@ const Banner = () => {
         <section className='w-full max-w-7xl mx-auto'>
             <div className="container  flex flex-col-reverse justify-center items-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
                 <div className="flex flex-col justify-center  text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-                    <h1 className="text-3xl font-bold leading-none sm:text-6xl">Learn Languages
+                    <h1 className="text-3xl font-bold text-black leading-none sm:text-6xl">Learn Languages
                         <span className="dark:text-violet-600"> Achieve Dreams</span> with Expert Tutors
                     </h1>
-                    <p className="mt-6 mb-8 text-lg sm:mb-12">With flexible schedules, diverse subjects, and top-rated tutors, learning has never been this convenient
+                    <p className="mt-6 mb-8 text-lg text-black sm:mb-12">With flexible schedules, diverse subjects, and top-rated tutors, learning has never been this convenient
                         <br className="hidden md:inline lg:hidden" /> Master a new language or subject with personalized lessons from experienced tutors
                     </p>
                     <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">

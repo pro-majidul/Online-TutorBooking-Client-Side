@@ -12,7 +12,7 @@ const TutorDetails = () => {
     const [datas, setDatas] = useState(loaderdata)
     const [loader, setLoader] = useState(true);
     const navigate = useNavigate()
-    // const axiosdata = useSecureAxios()
+    const axiosdata = useSecureAxios()
 
 
     useEffect(() => {
