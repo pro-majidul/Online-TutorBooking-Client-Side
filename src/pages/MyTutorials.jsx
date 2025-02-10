@@ -68,7 +68,7 @@ const MyTutorials = () => {
     }
     //  console.log(data);
     return (
-        <div className='grid grid-cols-1  py-5 pt-28 sm:grid-cols-2 md:grid-cols-3 g gap-5'>
+        <div className='grid grid-cols-1 w-full mx-auto max-w-7xl  py-5 pt-28 sm:grid-cols-2 md:grid-cols-3 g gap-5'>
             {
                 data.map(items => <div key={items._id} className="flex border-2 transition hover:scale-105 flex-col max-w-md p-6 rounded-md ">
                     <img

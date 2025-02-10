@@ -78,7 +78,7 @@ const UpdateTutors = () => {
 
     return (
 
-        <div >
+        <div className='w-full mx-auto max-w-7xl'>
 
             <form onSubmit={handelUpdate} className="card-body pt-32">
                 <div className="grid md:grid-cols-2 gap-10">
