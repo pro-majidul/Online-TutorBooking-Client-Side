@@ -5,6 +5,7 @@ import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
 import { Fade } from 'react-awesome-reveal';
+import Swal from 'sweetalert2';
 
 const ContactUs = () => {
 
@@ -13,32 +14,42 @@ const ContactUs = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        const formData = new FormData(form.current);
-        const fromName = formData.get('from_name');
-        const fromEmail = formData.get('from_email');
-        const message = formData.get('message');
+        const formvalue = new FormData(e.target)
+
+        const fromName = formvalue.get('from_name');
+        const fromEmail = formvalue.get('from_email');
+        const message = formvalue.get('message');
 
         const emailParams = {
             from_name: fromName,
             from_email: fromEmail,
             message: message,
-            reply_to: fromEmail,
-           
         };
+        // console.log(emailParams)
 
         emailjs
-            .sendForm('service_ggwkmsr', 'template_ud9cxne', form.current, {
-                publicKey: 'zTJh8Dk6Sk51W-Uy8',
-            })
+            .send('service_6gjwpde', 'template_ud9cxne', emailParams, 'zTJh8Dk6Sk51W-Uy8')
             .then(
                 () => {
-                    console.log('SUCCESS!');
-                    toast.success('Message Sent Successfully');
-                    form.current.reset();
+                    // console.log('SUCCESS!');
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Message Send Successfull",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    e.target.reset()
                 },
                 (error) => {
                     console.log('FAILED...', error.text);
-                    toast.error(`${error.text}`);
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "error",
+                        title: `${error.text}`,
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
                 }
             );
     };
