@@ -42,7 +42,7 @@ const ContactUs = () => {
                     e.target.reset()
                 },
                 (error) => {
-                    console.log('FAILED...', error.text);
+                    // console.log('FAILED...', error.text);
                     Swal.fire({
                         position: "top-end",
                         icon: "error",

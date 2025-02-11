@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import useUsers from '../hooks/useUsers';
-import axios from 'axios';
 import { toast } from 'react-toastify';
 import useSecureAxios from '../hooks/useSecureAxios';
 
@@ -26,10 +25,10 @@ const BookedTutors = () => {
             }
         };
     
-        if (user.email) {
+        if (user?.email) {
             fetchData();
         }
-    }, [user.email])
+    }, [user?.email])
 
     // console.log(items);
 

@@ -6,8 +6,8 @@ import { toast } from 'react-toastify';
 import useSecureAxios from '../hooks/useSecureAxios';
 
 const MyTutorials = () => {
-    const { user } = useUsers()
-    const [loader, setLoader] = useState(true);
+    const { user ,loader, setLoader} = useUsers()
+    // const [loader, setLoader] = useState(true);
     const [data, setData] = useState([])
     const axiosSecure = useSecureAxios()
 
