@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
-        <section className='w-full max-w-7xl mx-auto'>
+        <section className='w-full max-w-7xl mx-auto px-10'>
             <div className="container  flex flex-col-reverse justify-center items-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
                 <div className="flex flex-col justify-center  text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
                     <h1 className="text-3xl font-bold text-black leading-none sm:text-6xl">Learn Languages
