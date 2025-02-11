@@ -12,9 +12,6 @@ import bgimg2 from '../assets/img2.jpg'
 import bgimg3 from '../assets/img3.jpg'
 import bgimg4 from '../assets/img4.jpg'
 import bgimg5 from '../assets/img5.jpg'
-
-
-
 import React from 'react';
 import Review from './Review'
 

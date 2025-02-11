@@ -5,8 +5,8 @@ import { GrInstagram } from 'react-icons/gr';
 
 const Footer = () => {
     return (
-        <footer className="px-10 divide-y bg-purple-100 ">
-            <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
+        <footer className=" divide-y bg-purple-100 ">
+            <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0 md:px-10 px-2 max-w-7xl">
                 <div className="lg:w-1/3">
                     <p className="flex justify-center space-x-3 lg:justify-start">
                         <span className="self-center text-2xl text-black flex gap-1 md:text-3xl font-semibold"> <GiTeacher size={32} />Online Tutors</span>

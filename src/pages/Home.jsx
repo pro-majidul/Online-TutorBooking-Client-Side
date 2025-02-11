@@ -16,14 +16,14 @@ const Home = () => {
                 <Starts></Starts>
                 <div className='shadow-lg'>
                     <div >
-                        <h3 className='my-5 py-5 text-center text-xl md:text-3xl font-medium text-orange-400 md:font-bold underline underline-offset-8'>Languages</h3>
+                        <h3 className='my-5 py-5 text-center text-xl md:text-3xl font-medium  md:font-bold'>Languages</h3>
 
                     </div>
                     <Languages></Languages>
                 </div>
                 <div className='my-5 shadow-md'>
                     <div>
-                        <h3 className='my-5 py-5 text-center text-xl md:text-3xl font-medium text-orange-400 md:font-bold underline underline-offset-8'>What Client Says</h3>
+                        <h3 className='my-5 py-5 text-center text-xl md:text-3xl font-medium  md:font-bold'>What Client Says</h3>
                     </div>
                     <CarusolReview></CarusolReview>
                 </div>

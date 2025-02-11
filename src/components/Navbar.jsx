@@ -31,7 +31,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className='bg-[#ff7aac] bg-opacity-65 z-10 fixed w-full px-10'>
+        <div className='bg-[#ff7aac] bg-opacity-65 z-10 fixed w-full md:px-10'>
             <div className="navbar w-full max-w-7xl mx-auto ">
                 <div className="navbar-start ">
                     <div className="dropdown">

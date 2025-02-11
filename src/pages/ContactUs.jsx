@@ -22,8 +22,8 @@ const ContactUs = () => {
             from_name: fromName,
             from_email: fromEmail,
             message: message,
-            reply_to: fromEmail,  // reply to the sender's email
-            bcc_email: 'bcc@example.com', // BCC email address (update this with the actual BCC email)
+            reply_to: fromEmail,
+           
         };
 
         emailjs

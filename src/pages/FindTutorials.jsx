@@ -22,7 +22,7 @@ const FindTutorials = () => {
         </div>
     }
     return (
-        <div className='pt-28'>
+        <div className='pt-20 w-full max-w-7xl mx-auto'>
 
             <div className='flex items-center justify-center'>
                 <div className="relative mt-6 mb-12">
@@ -46,7 +46,7 @@ const FindTutorials = () => {
                                     <img src={items.photo} alt="" className="h-full w-full" />
                                 </div>
 
-                                <div className="flex flex-col flex-1 p-6 text-black">
+                                <div className="flex flex-col flex-1 p-6">
 
                                     <p className="text-lg tracking-wider uppercase hover:underline dark:text-violet-600">Name:{items.name}</p>
                                     <h3 className="flex-1 py-2 text-lg font-semibold leading-snug">Language :  {items.language}</h3>

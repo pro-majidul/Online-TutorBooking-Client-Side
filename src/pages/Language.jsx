@@ -15,7 +15,7 @@ const Language = () => {
             }).catch(error => {
                 setLoader(false)
             })
-    }, [search,])
+    }, [search])
 
     if (loader) {
         return <div className='flex items-center justify-center min-h-screen'>
@@ -24,8 +24,8 @@ const Language = () => {
     }
 
     return (
-        <div>
-            <div className='flex items-center justify-center pt-28'>
+        <div className='w-full max-w-7xl mx-auto'>
+            <div className='flex items-center justify-center pt-20'>
                 <div className="relative mt-6 mb-12">
                     <span className="absolute inset-y-0 flex items-center pl-2 mx-auto">
                         <button type="submit" title="Search" className="p-1 focus:outline-none focus:ring">

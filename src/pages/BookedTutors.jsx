@@ -48,7 +48,7 @@ const BookedTutors = () => {
 
     }
     return (
-        <div className="container  p-2 mx-auto sm:p-4 dark:text-gray-800">
+        <div className="container max-w-7xl max-h-max  p-2 mx-auto sm:p-4 dark:text-gray-800">
             <div className=" overflow-x-auto pt-28">
                 <table className="table bg-purple-800">
 
