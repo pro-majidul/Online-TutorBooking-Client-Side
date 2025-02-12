@@ -6,23 +6,30 @@ import { toast } from 'react-toastify';
 import useSecureAxios from '../hooks/useSecureAxios';
 
 const MyTutorials = () => {
-    const { user } = useUsers()
-    const [loader, setLoader] = useState(true);
+    const { user, loader } = useUsers()
+    const [loaderer, setLoader] = useState(true);
     const [data, setData] = useState([])
     const axiosSecure = useSecureAxios()
 
 
 
     useEffect(() => {
-        try {
 
-            axiosSecure.get(`/tutor/${user?.email}`)
-                .then(res => {
-                    setData(res.data)
-                    setLoader(false)
-                })
-        } catch {
-            setLoader(false)
+        const myitems = () => {
+            try {
+
+                axiosSecure.get(`/tutor/${user?.email}`)
+                    .then(res => {
+                        setData(res.data)
+                        setLoader(false)
+                    })
+            } catch {
+                setLoader(false)
+            }
+        }
+
+        return () => {
+            user?.email && myitems()
         }
 
     }, [user.email])
@@ -61,7 +68,7 @@ const MyTutorials = () => {
 
 
 
-    if (loader) {
+    if (loader || loaderer) {
         return <div className='flex items-center justify-center min-h-screen'>
             <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-violet-600"></div>
         </div>
