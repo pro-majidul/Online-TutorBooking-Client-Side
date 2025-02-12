@@ -28,13 +28,13 @@ const Languages = () => {
             <div className="container grid grid-cols-1 gap-6 m-4 mx-auto md:m-0 md:grid-cols-2 xl:grid-cols-3">
                 {
                     languages.map(language => <Link key={language._id} to={`/find-tutors/${language.language}`}>
-                        <div className="flex overflow-hidden rounded-lg md:p-6 p-4 transition hover:scale-x-105 hover:bg-purple-500 border dark:bg-gray-50 dark:text-gray-800">
+                        <div className="flex overflow-hidden rounded-lg md:p-6 p-4 transition hover:scale-x-105 hover:bg-purple-500 border dark:bg-gray-50 dark:text-gray-800 h-32">
                             <div className="flex items-center justify-center px-4">
                                 <img className='w-10' src={language.img} />
 
                             </div>
                             <div className="flex items-center justify-between flex-1 p-3">
-                                <p className="text-2xl font-semibold">{language.language} Tutors</p>
+                                <p className="md:text-2xl font-semibold">{language.language} Tutors</p>
                                 <p><FaChevronRight /></p>
                             </div>
                         </div>
