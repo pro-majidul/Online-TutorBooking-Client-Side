@@ -17,7 +17,7 @@ const Login = () => {
             .then(result => {
                 toast.success('user login Success')
                 setUser(result.user)
-                navigate(location.state ? location.state : '/')
+                navigate('/')
             })
             .catch(error => {
                 // console.log(error);
@@ -52,7 +52,7 @@ const Login = () => {
                         // console.log(error);
                     })
 
-                navigate(location.state ? location.state : '/')
+                navigate('/')
             })
             .catch(error => {
                 // console.log(error);

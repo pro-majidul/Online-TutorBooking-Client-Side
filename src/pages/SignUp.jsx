@@ -8,11 +8,8 @@ import { toast } from 'react-toastify';
 const SignUp = () => {
     const { updateUserInfo, logOutUser, createUser } = useUsers()
     const navigate = useNavigate();
-
-
     const handleSignUp = (e) => {
         e.preventDefault();
-
         const form = e.target;
         const name = form.name.value;
         const email = form.email.value;
