@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 const FindTutorials = () => {
     const [data, setData] = useState([])
     const [loader, setLoader] = useState(true);
-    const [search, setSearch] = useState('')
+    const [search, setSearch] = useState('');
+    const [sort, setSort] = useState('')
     useEffect(() => {
-        fetch(`https://online-tutorial-booking-platform-server-side.vercel.app/allTutors?search=${search}`)
+        fetch(`https://online-tutorial-booking-platform-server-side.vercel.app/allTutors?search=${search}&sort=${sort}`)
             .then(res => res.json())
             .then(data => {
                 setData(data)
@@ -14,13 +15,16 @@ const FindTutorials = () => {
             }).catch(error => {
                 setLoader(false)
             })
-    }, [search])
+    }, [search,sort])
 
     if (loader) {
         return <div className='flex items-center justify-center min-h-screen'>
             <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-violet-600"></div>
         </div>
     }
+
+    console.log(sort)
+    console.log(data)
     return (
         <div className='pt-20 w-full max-w-7xl mx-auto'>
 
@@ -63,7 +67,11 @@ const FindTutorials = () => {
 
                 {/* Sort Dropdown */}
                 <div>
-                    <select className="px-4 py-3 border border-gray-300 rounded-full shadow-sm bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300 text-gray-700">
+                    <select
+                        onChange={(e) => setSort(e.target.value)}
+                        defaultValue='Sort By Price'
+                        className="px-4 py-3 border border-gray-300 rounded-full shadow-sm bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300 text-gray-700">
+                        <option disabled>Sort By Price</option>
                         <option value="Descending">Descending</option>
                         <option value="Ascending">Ascending</option>
                     </select>
