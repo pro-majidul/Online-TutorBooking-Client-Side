@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import useSecureAxios from '../hooks/useSecureAxios';
 
 const AddTutorials = () => {
-    const { user } = useUsers()
+    const { user,loader } = useUsers()
     const navigate = useNavigate()
     const axiosSecure = useSecureAxios()
     const handelAddTutorials = e => {
@@ -25,6 +25,11 @@ const AddTutorials = () => {
                 }
             })
 
+    }
+    if (loader) {
+        return <div className='flex items-center justify-center min-h-screen'>
+            <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-violet-600"></div>
+        </div>
     }
     return (
         <div className="bg-bannerImg  bg-no-repeat bg-cover bg-center md:p-28">
@@ -67,7 +72,7 @@ const AddTutorials = () => {
                             <label className="label">
                                 <span className="label-text">Price</span>
                             </label>
-                            <input type="text" name='price' placeholder="Enter Your Price" className="input input-bordered" required />
+                            <input type="number" name='price' placeholder="Enter Your Price" className="input input-bordered" required />
                         </div>
 
                         <div className="form-control">

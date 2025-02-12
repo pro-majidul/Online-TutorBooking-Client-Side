@@ -117,7 +117,7 @@ const UpdateTutors = () => {
                         <label className="label">
                             <span className="label-text">Price</span>
                         </label>
-                        <input type="text" name='price' defaultValue={price} placeholder="Enter Your Price" className="input input-bordered" required />
+                        <input type="number" name='price' defaultValue={price} placeholder="Enter Your Price" className="input input-bordered" required />
                     </div>
 
 
